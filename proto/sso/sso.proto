@@ -5,7 +5,7 @@ package auth;
 option go_package = "WilMember.sso.v1;ssov1;";
 
 service Auth {
-    rpc Register (RegisterRequest) returns (RegisterResponce);
+    rpc Register (RegisterRequest) returns (RegisterResponse);
     rpc Login (LoginRequest) returns (LoginResponse);
     rpc IsAdmin (IsAdminRequest) returns (IsAdminResponse);
 }
@@ -15,7 +15,7 @@ message RegisterRequest {
     string password =2;
 }
 
-message RegisterResponce {
+message RegisterResponse {
     int64 user_id = 1;
 }
 
